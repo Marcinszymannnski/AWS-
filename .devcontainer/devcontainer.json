@@ -1,0 +1,19 @@
+{
+    "name": "DevOps-Env",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu", 
+    "features": {
+        "docker-in-docker": "latest"
+    },
+    "mounts": [
+        "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+    ],
+    "postCreateCommand": "echo '✅ Środowisko gotowe!'",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-azuretools.vscode-docker",
+                "ms-vscode-remote.remote-containers"
+            ]
+        }
+    }
+}
